@@ -1,0 +1,1035 @@
+with real audiences<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Indian Entertainment Crisis: A Multi-Format Analysis</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #fff;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 320%22><path fill=%22%23ffffff%22 fill-opacity=%220.1%22 d=%22M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,133.3C960,128,1056,96,1152,90.7C1248,85,1344,107,1392,117.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22></path></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    
+    .logo-container {
+      display: inline-block;
+      margin-bottom: 30px;
+      perspective: 1000px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cube {
+      --cube-size: 80px;
+      width: var(--cube-size);
+      height: var(--cube-size);
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateCube 4s infinite linear;
+    }
+    
+    @keyframes rotateCube {
+      0% { transform: rotateX(0) rotateY(0); }
+      100% { transform: rotateX(360deg) rotateY(360deg); }
+    }
+    
+    .cube-face {
+      position: absolute;
+      width: var(--cube-size);
+      height: var(--cube-size);
+      border: 2px solid rgba(255,255,255,.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: calc(var(--cube-size) * 0.3);
+      font-weight: 800;
+      color: #fff;
+    }
+    
+    .front { background: linear-gradient(135deg, rgba(102,126,234,.85), rgba(118,75,162,.85)); transform: translateZ(calc(var(--cube-size)/2)); }
+    .back { background: linear-gradient(135deg, rgba(0,221,136,.85), rgba(102,126,234,.85)); transform: rotateY(180deg) translateZ(calc(var(--cube-size)/2)); }
+    .left { background: linear-gradient(135deg, rgba(255,170,0,.85), rgba(255,68,68,.85)); transform: rotateY(-90deg) translateZ(calc(var(--cube-size)/2)); }
+    .right { background: linear-gradient(135deg, rgba(118,75,162,.85), rgba(255,170,0,.85)); transform: rotateY(90deg) translateZ(calc(var(--cube-size)/2)); }
+    .top { background: linear-gradient(135deg, rgba(0,221,136,.85), rgba(255,68,68,.85)); transform: rotateX(90deg) translateZ(calc(var(--cube-size)/2)); }
+    .bottom { background: linear-gradient(135deg, rgba(102,126,234,.85), rgba(0,221,136,.85)); transform: rotateX(-90deg) translateZ(calc(var(--cube-size)/2)); }
+    
+    .brand-name {
+      font-size: 2.2em;
+      font-weight: 800;
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .brand-tagline {
+      font-size: 1em;
+      opacity: .9;
+      margin-top: 10px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .report-title {
+      font-size: 1.8em;
+      margin-top: 25px;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Tab Navigation */
+    .tab-nav {
+      background: #f8f9fa;
+      border-bottom: 3px solid #667eea;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    }
+    
+    .tab-btn {
+      padding: 15px 30px;
+      border: none;
+      background: transparent;
+      color: #555;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+      margin: 5px;
+    }
+    
+    .tab-btn:hover {
+      color: #667eea;
+      background: rgba(102,126,234,.1);
+    }
+    
+    .tab-btn.active {
+      color: #667eea;
+      border-bottom-color: #667eea;
+      background: rgba(102,126,234,.15);
+    }
+
+    /* Content Sections */
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .content-section {
+      padding: 60px 40px;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title {
+      font-size: 2.5em;
+      font-weight: 800;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+    }
+    
+    .section-subtitle {
+      font-size: 1.2em;
+      color: #666;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 50px 0;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 35px;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(102,126,234,.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(102,126,234,.5);
+    }
+    
+    .stat-number {
+      font-size: 3em;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    
+    .stat-label {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    /* Issue Cards */
+    .issues-container {
+      display: grid;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .issue-card {
+      background: white;
+      border-left: 5px solid #667eea;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+      transition: all 0.3s ease;
+    }
+    
+    .issue-card:hover {
+      box-shadow: 0 10px 30px rgba(0,0,0,.15);
+      transform: translateX(10px);
+    }
+    
+    .issue-card h3 {
+      color: #667eea;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+    
+    .issue-card p {
+      color: #555;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+    
+    .impact-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: #ff4444;
+      color: white;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    
+    .impact-badge.critical { background: #ff4444; }
+    .impact-badge.high { background: #ff9500; }
+    .impact-badge.medium { background: #ffcc00; }
+
+    /* Solutions Grid */
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+    
+    .solution-card {
+      background: linear-gradient(135deg, rgba(102,126,234,.1), rgba(118,75,162,.1));
+      padding: 35px;
+      border-radius: 15px;
+      border: 2px solid #667eea;
+      transition: all 0.3s ease;
+    }
+    
+    .solution-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(102,126,234,.3);
+      background: linear-gradient(135deg, rgba(102,126,234,.2), rgba(118,75,162,.2));
+    }
+    
+    .solution-icon {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    
+    .solution-card h3 {
+      color: #1e3c72;
+      font-size: 1.4em;
+      margin-bottom: 15px;
+    }
+    
+    .solution-card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      margin: 40px 0;
+      border-collapse: collapse;
+      box-shadow: 0 5px 20px rgba(0,0,0,.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 20px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .comparison-table td {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .comparison-table tr:hover {
+      background: rgba(102,126,234,.05);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: white;
+      padding: 80px 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    
+    .cta-title {
+      font-size: 2.5em;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+    
+    .cta-text {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      opacity: 0.9;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 45px;
+      background: white;
+      color: #1e3c72;
+      font-size: 1.2em;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.3);
+    }
+
+    /* Footer */
+    .footer {
+      background: #1e3c72;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
+    
+    .footer-link {
+      color: #fff;
+      text-decoration: underline;
+    }
+    
+    .footer h3 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    
+    .footer p {
+      margin: 10px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .tab-btn {
+        padding: 12px 20px;
+        font-size: 0.9em;
+      }
+      
+      .section-title {
+        font-size: 2em;
+      }
+      
+      .stat-number {
+        font-size: 2.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo-container" id="header-cube"></div>
+      <div class="brand-name">insights3D</div>
+      <div class="brand-tagline">Data-Driven. Digital. Decoded.</div>
+      <div class="report-title">The Indian Entertainment Crisis</div>
+    </div>
+
+    <!-- TAB NAVIGATION -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="showTab('overview')">Executive Overview</button>
+      <button class="tab-btn" onclick="showTab('movies')">Movies</button>
+      <button class="tab-btn" onclick="showTab('tv')">Linear TV</button>
+      <button class="tab-btn" onclick="showTab('ott')">OTT</button>
+      <button class="tab-btn" onclick="showTab('ads')">Advertising</button>
+      <button class="tab-btn" onclick="showTab('solutions')">Solutions</button>
+    </div>
+
+    <!-- OVERVIEW TAB -->
+    <div id="overview" class="tab-content active">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">The Attention Economy Is Broken</h1>
+          <p class="section-subtitle">India's entertainment industry produces massive volume but captures minimal value. From theatrical releases to OTT originals, the disconnect between content creation and audience engagement has reached crisis levels.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">77%</div>
+            <div class="stat-label">Bollywood Films Fail</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">223</div>
+            <div class="stat-label">Tamil Films Flopped (2024)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">&lt;50%</div>
+            <div class="stat-label">Hindi TV Viewing Share</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">148M</div>
+            <div class="stat-label">Paid OTT Subs (of 601M Users)</div>
+          </div>
+        </div>
+
+        <div class="issues-container">
+          <div class="issue-card">
+            <h3>🎬 The Polarization Problem</h3>
+            <p>The top 10 titles deliver <strong>41% of total box office revenue</strong>, while the vast middle and long tail struggle. This concentration creates extreme volatility—one misstep at the top cascades through exhibitors, distributors, and streaming platforms.</p>
+            <span class="impact-badge critical">Critical Impact</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>💰 The Pre-Budget Gap</h3>
+            <p>Indian productions allocate only <strong>3-7% to pre-budget development</strong> compared to Hollywood's 12-15%. This under-investment in script testing, audience research, and creative validation leads to expensive late-stage corrections and high failure rates.</p>
+            <span class="impact-badge critical">Critical Impact</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>🎯 The Hook Failure</h3>
+            <p>Trailers and promos optimize for <strong>views instead of intent</strong>. Generic hooks, plot-revealing cuts, and vanity metrics dominate—while proven methods to lift appeal and conversion remain untapped.</p>
+            <span class="impact-badge high">High Impact</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>⏱️ The 8-Second Test</h3>
+            <p>Modern audiences filter content in <strong>8-10 seconds</strong>. Yet most marketing materials fail to establish a compelling hook within this window, leading to immediate drop-offs across all platforms.</p>
+            <span class="impact-badge high">High Impact</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h2 class="cta-title">There's a Better Way</h2>
+        <p class="cta-text">Structured testing, data-driven hooks, and disciplined pre-production can reduce failure rates by 20-30% while protecting revenue across formats.</p>
+      </div>
+    </div>
+
+    <!-- MOVIES TAB -->
+    <div id="movies" class="tab-content">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">Theatrical: High Stakes, Higher Failures</h1>
+          <p class="section-subtitle">India's box office reached ₹11,833 crore in 2024—but Hindi films dropped 13% YoY and relied heavily on dubbed Southern content. The failure cascade is clear.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">₹11,833cr</div>
+            <div class="stat-label">2024 Box Office</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">-13%</div>
+            <div class="stat-label">Hindi YoY Decline</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">30%</div>
+            <div class="stat-label">Marketing Share (Double Pre-COVID)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">41%</div>
+            <div class="stat-label">Revenue from Top 10 Films</div>
+          </div>
+        </div>
+
+        <div class="issues-container">
+          <div class="issue-card">
+            <h3>Weak Script Selection</h3>
+            <p><strong>Primary Risk:</strong> Films get approved based on which star will act in them, not whether the story is actually good. Producers rely on gut feeling instead of properly testing the script.</p>
+            <p><strong>Impact:</strong> When the movie flops at the box office, satellite TV channels and streaming platforms pay much less for the rights. A ₹30 crore film can lose ₹10-15 crore in reduced pricing alone.</p>
+            <span class="impact-badge critical">Revenue Impact: High</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Promo Inefficiency</h3>
+            <p><strong>Primary Risk:</strong> Success measured by YouTube views instead of appeal lift or first-weekend intent.</p>
+            <p><strong>Impact:</strong> Marketing budgets now consume 30% of total spend—double pre-COVID levels—with minimal conversion testing.</p>
+            <span class="impact-badge high">Cost Impact: Significant</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Cost Structure Imbalance</h3>
+            <p><strong>Primary Risk:</strong> Star salaries crowd out craft, development, and testing allocations.</p>
+            <p><strong>Impact:</strong> Late-stage problems become expensive to fix; reshoots and campaign pivots drain budgets.</p>
+            <span class="impact-badge high">Efficiency Impact</span>
+          </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 60px 0 30px; font-size: 2em; color: #1e3c72;">The Failure Chain</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Current Practice</th>
+              <th>Consequence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Script Selection</strong></td>
+              <td>Decision based on star power and producer's instinct, not proper story evaluation</td>
+              <td>Bad scripts get approved because "this type worked before" or "we have a big star"</td>
+            </tr>
+            <tr>
+              <td><strong>Marketing Strategy</strong></td>
+              <td>Release songs, then teasers, then trailer in standard sequence. Success measured by YouTube views</td>
+              <td>Generic promotional material that doesn't make people actually want to buy tickets</td>
+            </tr>
+            <tr>
+              <td><strong>Opening Weekend</strong></td>
+              <td>Empty theaters mean cinema halls immediately reduce the number of shows</td>
+              <td>Box office earnings are 30-50% lower than projected</td>
+            </tr>
+            <tr>
+              <td><strong>Streaming Rights Pricing</strong></td>
+              <td>TV channels and OTT platforms offer 15-25% less money because the film flopped</td>
+              <td>Total profit collapses; cinema owners lose money too</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- LINEAR TV TAB -->
+    <div id="tv" class="tab-content">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">Linear TV: Share Erosion Accelerates</h1>
+          <p class="section-subtitle">Hindi TV's viewing share has slipped below 50% as regional content and digital viewing fragment the audience. Stronger premises are now table stakes.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">&lt;50%</div>
+            <div class="stat-label">Hindi TV Share (2024)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">TRP→CPRP</div>
+            <div class="stat-label">Direct Revenue Link</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">-20-30%</div>
+            <div class="stat-label">Make-Good Discounts</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Spillover</div>
+            <div class="stat-label">Daypart Degradation</div>
+          </div>
+        </div>
+
+        <div class="issue-card" style="max-width: 900px; margin: 40px auto; background: linear-gradient(135deg, rgba(0,221,136,.1), rgba(102,126,234,.1)); border-left-color: #00dd88;">
+          <h3>📺 Understanding TV Ratings & Revenue</h3>
+          <p><strong>TRP (Television Rating Point):</strong> Measures how many people are watching a show. A TRP of 2.5 means 2.5% of TV households are tuned in.</p>
+          <p style="margin-top: 15px;"><strong>CPRP (Cost Per Rating Point):</strong> How much advertisers pay to reach 1% of the TV audience. If your show has low TRP, advertisers need more ad spots to reach their target, so your "cost per point" becomes less attractive.</p>
+          <p style="margin-top: 15px;"><strong>Why This Matters:</strong> When your show gets lower ratings than promised, advertisers demand "make-goods" (free additional ad spots) or 20-30% discounts. This directly reduces the channel's revenue.</p>
+        </div>
+
+        <div class="issues-container">
+          <div class="issue-card">
+            <h3>Premise Fatigue</h3>
+            <p><strong>Primary Risk:</strong> Formulaic daily soaps without differentiated hooks or character arcs struggle to compete with regional and OTT alternatives.</p>
+            <p><strong>Impact:</strong> Week-1 TRP below benchmark triggers immediate ad rate pressure.</p>
+            <span class="impact-badge high">Monetization Risk</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Ad Break Retention</h3>
+            <p><strong>Primary Risk:</strong> Weak tension points before commercial breaks lead to tune-out and channel switching.</p>
+            <p><strong>Impact:</strong> Effective CPRP rises; advertisers demand make-goods or discounts of 20-30%.</p>
+            <span class="impact-badge critical">Revenue Leak</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Network Effect Damage</h3>
+            <p><strong>Primary Risk:</strong> One underperforming show drags down lead-out programming and entire daypart performance.</p>
+            <p><strong>Impact:</strong> 5-10% spillover drop creates compounding revenue loss across the schedule.</p>
+            <span class="impact-badge high">Systemic Impact</span>
+          </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 60px 0 30px; font-size: 2em; color: #1e3c72;">The TRP → Revenue Cascade</h2>
+        <div class="issue-card" style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, rgba(255,68,68,.1), rgba(255,170,0,.1)); border-left-color: #ff4444;">
+          <h3>When a Prime-Time Show Misses Target</h3>
+          <p><strong>Planned TRP:</strong> 2.5 → <strong>Actual TRP:</strong> 1.6</p>
+          <p style="margin-top: 20px;"><strong>Immediate Impact:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>CPRP increases (fewer impressions delivered)</li>
+            <li>Advertisers demand make-goods or 20-30% discounts</li>
+            <li>Sponsor renewal at risk</li>
+          </ul>
+          <p style="margin-top: 20px;"><strong>Cascading Impact:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Lead-out show drops 5-10% in ratings</li>
+            <li>Entire daypart share erodes</li>
+            <li>Network pricing power weakens across all slots</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTT TAB -->
+    <div id="ott" class="tab-content">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">OTT: Scale Without Monetization</h1>
+          <p class="section-subtitle">India has 601M OTT viewers but only 148M paid subscriptions. The gap between reach and revenue reveals a retention crisis.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">601M</div>
+            <div class="stat-label">Total OTT Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">148M</div>
+            <div class="stat-label">Paid Subscriptions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">57</div>
+            <div class="stat-label">Active Platforms</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">High</div>
+            <div class="stat-label">Monthly Churn</div>
+          </div>
+        </div>
+
+        <div class="issues-container">
+          <div class="issue-card">
+            <h3>Episode-1 First-5-Minutes Drop-Off</h3>
+            <p><strong>Primary Risk:</strong> 60-70% of viewers abandon a show within the first 5 minutes if the opening doesn't immediately grab attention. Slow intros, confusing setups, or boring exposition kill interest instantly.</p>
+            <p><strong>Impact:</strong> If Episode 1 fails in the first 5 minutes, you've already lost most of your audience. Episode 2 retention becomes irrelevant because viewers never make it that far. The show is essentially dead on arrival.</p>
+            <span class="impact-badge critical">First Impression Killer</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Episode-2 Drop-Off</h3>
+            <p><strong>Primary Risk:</strong> Even if Episode 1 hooks viewers, weak Episode 2 openings and lack of cliffhangers cause massive viewer loss.</p>
+            <p><strong>Impact:</strong> If Episode 2 retention falls below 35%, projected subscriber growth can miss by 60%+ (targeting 150,000 new subscribers but only getting 60,000).</p>
+            <span class="impact-badge critical">Growth Killer</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Algorithm Deprioritization</h3>
+            <p><strong>What This Means:</strong> Streaming platforms use algorithms (automated systems) to decide which shows to promote on the homepage. If viewers start your show but don't finish episodes or drop off quickly, the algorithm assumes it's bad content and stops recommending it.</p>
+            <p><strong>Impact:</strong> Your show becomes invisible—buried on page 5 where no one will find it. Discovery collapses, and you need to spend heavily on paid ads to get any views at all.</p>
+            <span class="impact-badge critical">Visibility Collapse</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Thumbnail & Title Failure</h3>
+            <p><strong>Primary Risk:</strong> Generic thumbnail images (like blurry faces or unclear scenes) and vague titles make viewers scroll past your show without clicking.</p>
+            <p><strong>Impact:</strong> Even high-quality content fails to get watched because people don't understand what the show is about from the thumbnail. You're wasting prime homepage placement.</p>
+            <span class="impact-badge high">Click-Through Loss</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Single-Show Subscriptions</h3>
+            <p><strong>Primary Risk:</strong> Viewers subscribe to watch one popular show, finish it, can't find anything else interesting, and immediately cancel their subscription.</p>
+            <p><strong>Impact:</strong> High customer acquisition cost but low lifetime value. The streaming service spends ₹200 to acquire each subscriber but only earns ₹150 before they quit—a losing business model.</p>
+            <span class="impact-badge critical">Business Model Risk</span>
+          </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 60px 0 30px; font-size: 2em; color: #1e3c72;">The Retention Math</h2>
+        <div class="issue-card" style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, rgba(102,126,234,.1), rgba(118,75,162,.1));">
+          <h3>Why Episode-2 Matters More Than Launch Day</h3>
+          <p><strong>Scenario:</strong> New series targets 150k net subscriber adds over 90 days</p>
+          <p style="margin-top: 20px;"><strong>If Episode-2 Retention Hits 60%:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Strong completion signals → algorithm promotion</li>
+            <li>Homepage featuring → organic discovery</li>
+            <li>Net adds: 150k+ (on target)</li>
+            <li>LTV: ₹700+ per cohort</li>
+          </ul>
+          <p style="margin-top: 20px;"><strong>If Episode-2 Retention Falls Below 35%:</strong></p>
+          <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>Algorithm deprioritization within 48 hours</li>
+            <li>Homepage demotion → minimal organic reach</li>
+            <li>Net adds: 60k (60% miss)</li>
+            <li>LTV: ₹450 per cohort</li>
+            <li>Increased paid media required → CAC rises 40%+</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADVERTISING TAB -->
+    <div id="ads" class="tab-content">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">Advertising: The Attention Deficit</h1>
+          <p class="section-subtitle">In an 8-second attention economy, most ads fail to establish a hook, brand linkage, or clear message—leading to wasted media spend and eroded brand equity.</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">8-10s</div>
+            <div class="stat-label">Average Attention Span</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">70%</div>
+            <div class="stat-label">Skip Before 15 Seconds</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3-5s</div>
+            <div class="stat-label">Hook Window</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">&lt;40%</div>
+            <div class="stat-label">Brand Recall at 5 Seconds</div>
+          </div>
+        </div>
+
+        <div class="issue-card" style="max-width: 900px; margin: 40px auto; background: linear-gradient(135deg, rgba(255,170,0,.1), rgba(255,68,68,.1)); border-left-color: #ffaa00;">
+          <h3>📱 What is "Brand Linkage"?</h3>
+          <p><strong>Brand Linkage:</strong> This measures whether viewers can remember which brand the ad was for after watching it.</p>
+          <p style="margin-top: 15px;"><strong>The 5-Second Test:</strong> If someone stops watching your ad at the 5-second mark (which most people do), can they tell you what brand it was advertising?</p>
+          <p style="margin-top: 15px;"><strong>The Problem:</strong> Most ads show the brand logo or name only in the last 5 seconds of a 30-second commercial. Since 70% of viewers skip before then, they see the ad but have no idea which company it's for. You're spending crores on advertising with less than 40% brand recall.</p>
+        </div>
+
+        <div class="issues-container">
+          <div class="issue-card">
+            <h3>Late Brand Reveal</h3>
+            <p><strong>Primary Risk:</strong> Your brand name or logo appears only in the last 5 seconds of the ad. By then, 70% of viewers have already moved on.</p>
+            <p><strong>Impact:</strong> Less than 40% of viewers can remember which brand the ad was for. You're paying to advertise your product category, not your specific brand. Your competitors benefit from your spending.</p>
+            <span class="impact-badge critical">Attribution Failure</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Weak Opening Hook</h3>
+            <p><strong>Primary Risk:</strong> The first 3 seconds of your ad are boring or confusing—generic shots, slow music, or unclear messaging that doesn't trigger any emotional response.</p>
+            <p><strong>Impact:</strong> More than 50% of viewers mentally "check out" in the first 3 seconds. By 15 seconds, 70% have skipped. Message retention drops below 30%, meaning people watched your ad but can't remember what it said.</p>
+            <span class="impact-badge critical">Engagement Killer</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Spending More But Earning Less</h3>
+            <p><strong>Primary Risk:</strong> Brands increase advertising budgets year after year, but without effective creative, the money doesn't translate into brand awareness or sales.</p>
+            <p><strong>Impact:</strong> Competitors with better creative execution steal market share despite smaller budgets. Your "share of voice" (how much you advertise) grows, but your "share of mind" (how much people think of your brand) stays flat or declines.</p>
+            <span class="impact-badge high">ROI Erosion</span>
+          </div>
+
+          <div class="issue-card">
+            <h3>Too Many Messages</h3>
+            <p><strong>Primary Risk:</strong> Trying to communicate 3-4 different product benefits in a 15-30 second ad, overwhelming the viewer.</p>
+            <p><strong>Impact:</strong> Less than 40% of viewers remember the main message. Your call-to-action gets lost. Brand positioning becomes unclear.</p>
+            <span class="impact-badge medium">Clarity Issue</span>
+          </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 60px 0 30px; font-size: 2em; color: #1e3c72;">Hook Types That Actually Work</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Hook Type</th>
+              <th>What It Means</th>
+              <th>When to Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Emotional Turn</strong></td>
+              <td>Start with one emotion (happiness/peace) and quickly flip to another (tension/surprise). Example: Happy family scene suddenly interrupted by shocking news.</td>
+              <td>Family products, brand films, storytelling campaigns where you want to create empathy</td>
+            </tr>
+            <tr>
+              <td><strong>Conflict/Stakes</strong></td>
+              <td>Immediately show a problem or challenge that needs solving. Example: "Running late for an important meeting? Here's the solution..."</td>
+              <td>Performance advertising, problem-solution products, challenger brands trying to stand out</td>
+            </tr>
+            <tr>
+              <td><strong>Spectacle/Scale</strong></td>
+              <td>Start with something visually stunning or impressive that makes people say "wow." Example: Breathtaking landscapes, massive scale, unique visuals.</td>
+              <td>Aspirational products, travel/experience marketing, tech launches, luxury brands</td>
+            </tr>
+            <tr>
+              <td><strong>Sonic Signature</strong></td>
+              <td>A unique sound or jingle that instantly identifies your brand (like Britannia's "ting ting ti-ding" or Airtel's tune).</td>
+              <td>Building long-term brand memory, audio-first platforms (radio/podcasts), mass market products</td>
+            </tr>
+            <tr>
+              <td><strong>Character Quirk</strong></td>
+              <td>Start with an unusual or funny character behavior that stands out. Example: Amul's butter girl, Vodafone's ZooZoos.</td>
+              <td>Youth brands, celebrity endorsements, creating shareable/meme-able content</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- SOLUTIONS TAB -->
+    <div id="solutions" class="tab-content">
+      <div class="content-section">
+        <div class="section-header">
+          <h1 class="section-title">The Path Forward</h1>
+          <p class="section-subtitle">Structured testing and disciplined pre-production can reduce failure rates by 20-30% while protecting revenue across all formats.</p>
+        </div>
+
+        <div class="issue-card" style="max-width: 1000px; margin: 0 auto 60px; background: linear-gradient(135deg, rgba(102,126,234,.15), rgba(118,75,162,.15)); border-left-color: #667eea;">
+          <h3>🚀 An Innovative, Path-Breaking Solution</h3>
+          <p>What if you could test your content, advertisements, and marketing materials <strong>before</strong> you spend crores on production and release? Using advanced testing methodologies and data analytics, you can identify what will work and what won't—at the script stage, the concept stage, and the creative stage.</p>
+          <p style="margin-top: 20px;"><strong>Who Benefits:</strong></p>
+          <ul style="margin-left: 25px; margin-top: 15px; line-height: 1.9;">
+            <li><strong>Production Houses & Studios:</strong> Reduce film failures from 77% to under 50% by testing scripts and trailers before investing crores</li>
+            <li><strong>Streaming Platforms (OTT):</strong> Predict Episode 1 & 2 retention rates before greenlighting expensive multi-season shows</li>
+            <li><strong>TV Channels:</strong> Test show concepts and pilot episodes to ensure TRP targets will be met, protecting ad revenue</li>
+            <li><strong>Brand Managers & Advertisers:</strong> Test multiple ad variants to find the one that maximizes brand recall and purchase intent before spending on media</li>
+            <li><strong>Marketing Teams:</strong> Know which trailer cut, poster design, or social media hook will actually drive ticket sales or subscriptions</li>
+            <li><strong>Investors & Distributors:</strong> Make data-backed decisions on which projects to fund or acquire, reducing financial risk</li>
+          </ul>
+          <p style="margin-top: 20px; font-weight: 600; font-size: 1.1em;">This approach transforms content development from expensive guesswork into a systematic, testable process—saving hundreds of crores across the industry while improving audience satisfaction.</p>
+        </div>
+
+        <div class="solutions-grid">
+          <div class="solution-card">
+            <div class="solution-icon">📋</div>
+            <h3>Require Professional Script Evaluation</h3>
+            <p>Before approving any script, get at least two independent experts to read and score it. Use a standard checklist: Is the premise unique? Are characters interesting? Are the stakes clear? Compare to similar successful projects before saying yes.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">💰</div>
+            <h3>Invest in Testing Early (10% of Budget)</h3>
+            <p>Currently, most productions spend only 3-7% on pre-production research. Shift this to 10%+. For a ₹30 crore film, spending ₹50 lakh on proper audience testing can prevent ₹10+ crore in losses from a flop.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">🎯</div>
+            <h3>Test Hooks, Not YouTube Views</h3>
+            <p>Create 3-5 different trailer versions with different opening hooks. Test them to see which one makes people most likely to buy tickets or subscribe—not which one gets the most views. Views don't equal sales.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">📊</div>
+            <h3>Measure What Matters</h3>
+            <p>Track attention seconds, completion rates, emotional peaks, and message takeout. Stop optimizing for vanity metrics; start optimizing for intent and brand lift.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">🎬</div>
+            <h3>Multi-Stage Approval Process</h3>
+            <p>Don't release full budgets at once. Unlock money in stages: (1) Script must pass professional evaluation, (2) Address all major concerns from test audiences, (3) Prove the concept works with a sample audience. No shortcuts allowed.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">📱</div>
+            <h3>Channel-Tailored Assets</h3>
+            <p>YouTube needs story-driven cuts. Instagram needs emotion-driven micro-hooks. OTT homepages need visual + dialogue punch. Stop running the same asset everywhere.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">🔍</div>
+            <h3>Test First 5 Minutes & Episode 2 (OTT)</h3>
+            <p>Test your pilot episode with real viewers. Track minute-by-minute: Do 60%+ stay past the first 5 minutes? Does Episode 2 retain at least 40% of Episode 1 viewers? If not, rework before spending crores on full seasons.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">📈</div>
+            <h3>Test Show Concepts Before Production (TV)</h3>
+            <p>Before committing to daily episodes, test your show concept and pilot with target audiences. Check if characters are likable, if the premise is interesting. If Week-1 test ratings are weak, fix the concept or don't proceed.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon">🎨</div>
+            <h3>Use Data to Guide Creative Decisions</h3>
+            <p>Track which scenes hold attention, where emotions peak, which dialogue works. Integrate this data into your creative process—not as a replacement for creativity, but as a tool to make better creative decisions backed by evidence.</p>
+          </div>
+        </div>
+
+        <h2 style="text-align: center; margin: 80px 0 40px; font-size: 2.5em; color: #1e3c72;">The Operating Model That Works</h2>
+        
+        <table class="comparison-table" style="margin-bottom: 60px;">
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>What to Do</th>
+              <th>Success Criteria (When to Proceed)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Stage 0: Initial Screening</strong></td>
+              <td>Read the 25-word summary. Get two independent experts to evaluate the full script and rate it: Pass/Consider/Recommend</td>
+              <td>Both experts give at least a "Consider" rating</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 1: Audience Testing</strong></td>
+              <td>Conduct table-read or show concept to a small test audience. Identify problems with story, characters, or ending. Fix these issues based on feedback.</td>
+              <td>Revised version scores better than the original and meets quality benchmarks</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 2: Pilot Testing</strong></td>
+              <td>For films: Test key scenes with different versions. For series: Create a pilot episode and measure viewer retention minute-by-minute</td>
+              <td>Audience interest increases. Intent to watch/purchase meets target threshold</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 3: Marketing Testing</strong></td>
+              <td>Create 3-5 different trailers with unique opening hooks. Test each one to see which drives the most ticket-buying or subscription intent (not just views)</td>
+              <td>Select the version that performs best in driving actual conversions</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 4: After Launch</strong></td>
+              <td>Track which paid ads lead to actual searches, social media mentions, and purchases. Use these learnings for future projects</td>
+              <td>Continuous improvement—each project gets smarter than the last</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cta-section">
+          <h2 class="cta-title">Ready to Transform Your Content Strategy?</h2>
+          <p class="cta-text">This report outlines the structural issues plaguing India's entertainment industry. The solutions exist. The methodologies work. What's missing is adoption.</p>
+          <p class="cta-text" style="margin-top: 25px; font-size: 1.15em;">Whether you're a production house, streaming platform, TV channel, brand manager, or investor—our innovative testing approach helps you make smarter decisions and protect your investments before a single rupee is wasted.</p>
+          <a href="mailto:aneesh@insights3d.com" class="cta-btn">Let's Talk →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="logo-container" id="footer-cube"></div>
+      <h3>insights3D</h3>
+      <p style="font-size:1em;margin-bottom:20px;opacity:.9;">Data-Driven. Digital. Decoded.</p>
+      <p style="font-size:1.1em;margin-bottom:10px;">© Copyright Insights3d.com</p>
+      <p style="font-size:1em;">Contact <a href="mailto:aneesh@insights3d.com" class="footer-link">aneesh@insights3d.com</a> to generate your custom analysis</p>
+    </div>
+  </div>
+
+  <script>
+    // Render cubes
+    function renderCube({ target, size = 80, emojis = ['📊','💡','📍','📈','🎯','🌍'] } = {}) {
+      const root = (typeof target === 'string') ? document.querySelector(target) : target;
+      if (!root) return;
+      const cube = document.createElement('div');
+      cube.className = 'cube';
+      cube.style.setProperty('--cube-size', size + 'px');
+      const faceClasses = ['front','back','left','right','top','bottom'];
+      faceClasses.forEach((cls, i) => {
+        const face = document.createElement('div');
+        face.className = 'cube-face ' + cls;
+        face.textContent = emojis[i] || '';
+        cube.appendChild(face);
+      });
+      root.appendChild(cube);
+    }
+
+    renderCube({ target: '#header-cube', size: 80 });
+    renderCube({ target: '#footer-cube', size: 50 });
+
+    // Tab functionality
+    function showTab(tabId) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Remove active class from all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected tab
+      document.getElementById(tabId).classList.add('active');
+      
+      // Add active class to clicked button
+      event.target.classList.add('active');
+      
+      // Scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
